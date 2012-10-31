@@ -750,14 +750,13 @@ asciidoc.install();
 <h2 id="_introducing_git_and_hg">Introducing Git and HG</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>This book is not about version control. That is a radical statement as
-it says "Using
-Git and Mercurial" on the cover, but its not about git or
-mercurial, nor is it about software development, though most of the
+it says "Using Git and Mercurial" on the cover, but its not about git
+or mercurial, nor is it about software development, though most of the
 readers will be software developers. What this book is about is teams.</p></div>
 <div class="paragraph"><p>Its not just software, many things worth doing these days are done by
-teams of people. While most people who use github are programmers
+teams of people. While most people who use GitHub are programmers
 and will use it to write programs.</p></div>
-<div class="paragraph"><p>Github can be used (And for
+<div class="paragraph"><p>GitHub can be used (And for
 those of you who know nothing about knitting, to say knitters are
 passionate about what they do would be an understatement)</p></div>
 <div class="sect2">
@@ -768,10 +767,10 @@ and what doesn&#8217;t.</p></div>
 <div class="paragraph"><p>In developing this book I have to thank several people, First of all
 Simon St Lawrence and Andy Oram at O&#8217;Reilly Media who have supported
 me.</p></div>
-<div class="paragraph"><p>Matthew McCullough of the github training group has offered me a
-number of suggestions as well as promoted this book within github.</p></div>
+<div class="paragraph"><p>Matthew McCullough of the GitHub training group has offered me a
+number of suggestions as well as promoted this book within GitHub.</p></div>
 <div class="paragraph"><p>In addition a number of people have sent me pull requests with
-changes. Contributors are listed here in alphabetical order by github user
+changes. Contributors are listed here in alphabetical order by GitHub user
 name.</p></div>
 <div class="ulist"><ul>
 <li>
@@ -784,6 +783,11 @@ breskeby - Rene Groeschke
 kirean   - Erik Andersson
 </p>
 </li>
+<li>
+<p>
+rkessin  - Richard Kessin
+</p>
+</li>
 </ul></div>
 </div>
 </div>
@@ -791,45 +795,131 @@ kirean   - Erik Andersson
 <div class="sect1">
 <h2 id="_tools_for_collaboration">Tools for Collaboration</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>When working with a group on a project you need to have a way to
+<div class="paragraph"><p>When working with a group on a project, you need to have a way to
 integrate the contributions of various team members.</p></div>
 <div class="paragraph"><p>It is possible to write in software like MS Word and email copies of
 the files around between collaborators. However this is a risky
-practice. As revisions of the file move around the number of versions
+practice. As revisions of the file move around, the number of versions
 of the file will go up. Trying to ensure that changes are not
-overwritten by mistake becomes an increasing difficult task.</p></div>
-<div class="literalblock">
-<div class="content monospaced">
-<pre></pre>
-</div></div>
-<div class="paragraph"><p>The quote in French means "Good Accounts make for good
-Friends" and is fitting. A business venture needs a good system to
+overwritten by mistake becomes an increasingly difficult task.</p></div>
+<div class="paragraph"><p>Given enough contributers and enough versions of the file it is
+inevitable that someone&#8217;s changes will get lost or that an older
+version of a paragraph will suddenly return when someone uses the
+wrong version of a file.</p></div>
+<div class="paragraph"><p>Sharing the file on a site like dropbox is also not a solution because if
+more than one person wishes to edit at the same time it is impossible
+to know which version of the file will be there when everyone is done.</p></div>
+<div class="sect2">
+<h3 id="_les_bons_comptes_font_les_bons_amis">Les bons comptes font les bons amis</h3>
+<div class="paragraph"><p>The quote in French means "Good accounts make for good
+friends" and is fitting. As business venture needs a good system to
 track its money, and a project needs a good system to keep track of
 the work done by its members.</p></div>
+<div class="paragraph"><p>A project can be any form of creative work, a computer program, a
+Novel, this book, a set of knitting patterns and so forth. Most
+projects will consist of one or more files that will reside on the
+computers of the project members.</p></div>
+<div class="paragraph"><p>As an example take this book. It consists of around 20 or so files
+that contain the actual text of the book, one for each chapter or
+section, and then a bunch of other files that contain things like the
+images that are included and a few random others.</p></div>
+<div class="paragraph"><p>As the book is being written we want to be able to share those
+documents between the writers, reviewers, editors, and in this case
+the world at large. Other projects will be shared in different ways.</p></div>
+<div class="paragraph"><p>In order to make this collaboration work we need two things. First a
+way to share the documents between the project members, and secondly a
+set of rules on how those contributors will work together.</p></div>
+<div class="paragraph"><p>It is all fine and good to say that it is possible to know if two
+users have the same version of a file, or how their copies differ, but
+if you have 20 people attempting to assemble a complex project you
+need a way to organize people so that tasks can be managed.</p></div>
+<div class="paragraph"><p>This book will attempt to lay out how to construct a system that will
+work for your team, by showing how different teams have faced these
+problems and mapping out their solutions.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_version_control">Version Control</h3>
 <div class="paragraph"><p>Thankfully various computer programmers over the years have faced this
-problem and realizing that it was a problem built tools to try and
+problem and realizing that it was a problem, built tools to try and
 solve it. These tools collectively are known as "Version Control
 Systems" Or "Revision Control Systems". The history of Version
 Control systems dates back to the 1970&#8217;s and has generated significant
 progress.</p></div>
-<div class="paragraph"><p>The way version control systems work is they track files and changes
-to those files. So it is possible to see the history of changes to a
-file and when each line was last changed and by whom.</p></div>
 <div class="paragraph"><p>The current major Version Control system is called "git" and was
 created by Linus Torvolds, when he was unable to find that existing
 systems did not meet the needs of the team that was developing the
 Linux kernel.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_git">GIT</h3>
 <div class="paragraph"><p>GIT is a very powerful tool that has a lot of features, but most of
 what is needed to work and collaborate with others can be done with a
 small enough to learn pretty quickly. In addition while many git
 tutorials show how to use git from a command line there are now many
 very nice graphical tools to enable the use of git without having to
 ever see a command line if you don&#8217;t want too.</p></div>
-<div class="paragraph"><p>The use of git is greatly enhanced by <a href="http://github.com">Github</a> a
+<div class="paragraph"><p>The way version control systems work is they track files and changes
+to those files. So it is possible to see the history of changes to a
+file and when each line was last changed and by whom.</p></div>
+<div class="paragraph"><p>This allows project members to say that they all the same version of a
+file, and to ensure that everyone&#8217;s changes have been accounted
+for. Git allows users to ensure that they have the same version of the
+project files by applying a mathematical function called SHA1 to the
+files in a project. At any given time the files committed to a project
+will have a unique SHA1 key.</p></div>
+<div class="paragraph"><p>Furthermore, if two members of project team have a project directory
+with the same SHA1 key they can be sure that the files in the project
+are the same.</p></div>
+<div class="paragraph"><p>Every time files are changed in a project git will create a new SHA1
+key for the project. So if Bob and Lisa want to know if they have the
+same files  they do not have to check every file for changes they can
+just compare their keys. If they match they know that the files are
+the same.</p></div>
+<div class="paragraph"><p>However if they are not the same git can look at the history of the
+files and figure out what has changed. So if Bob has sent Lisa  file
+for editing and she made some changes, git will use the SHA1 keys to
+compare the history of the files. In this case it will see that Bob&#8217;s
+files are an ancestor to Lisa&#8217;s. It can then know exactly what changes
+Lisa made and allow Bob to safely merge her changes. We will see
+an example of how to do this in <a href="#pull_request">Pull Request</a>.</p></div>
+<div class="sect3">
+<h4 id="_sha1">SHA1</h4>
+<div class="paragraph"><p>SHA1 is a cryptographic hash that when you apply it to data will
+return a 40 character string that looks like this,
+<strong>3fee35069bb9591edc3ab76f44b69c7b2d44be88</strong>.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">you can not recover the original files from that hash, SHA1 is
+strictly a one way function.</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>In general you will see a shorter form that looks like <strong>3fee350</strong>. In
+this case git will use as short a version of the string as it can as
+long as it is unique. Git does this because the developers realized
+that having to use a 40 character string would be difficult for
+users.</p></div>
+<div class="paragraph"><p>The details of how SHA1 turns arbitrary data into a hash are rather
+technical. If you want to know more about how SHA1 works you can look
+on <a href="http://en.wikipedia.org/wiki/Sha1">WIkipedia</a>.</p></div>
+<div class="paragraph"><p>The thing to remember is that the chances that two SHA1 keys will be
+the same while the files are not is  1:10<sup>48</sup>. That is close enough to
+0 for me.</p></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_github">GitHub</h3>
+<div class="paragraph"><p>The use of git is greatly enhanced by <a href="http://github.com">GitHub</a> a
 company that was founded in 2008 to facilitate using git to
-collaborate on software projects. Since the Github has grown to become
+collaborate on software projects. Since the GitHub has grown to become
 the most popular site for building collaborations in the open source
 software community.</p></div>
+<div class="paragraph"><p>GitHub is itself a distributed company with its team spread out all
+over the place so they not only develop the tools for working with
+distributed teams, they use them ever day.</p></div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -858,12 +948,12 @@ youtube and infoq.</p></div>
 such as bash. For those who are happy using a command line this can be
 a very productive way to work. But do not assume that it is the only
 way to work with GIT or even the "correct" way. The command line is an
-effective way to work, but so are a number of Graphical git
-clients. Use which ever makes most sense to you. In addition it is
-quite possible to use both the command line and one or more graphical
-tools.</p></div>
-<div class="paragraph"><p>When building this book I have been using command line git tool, plus
-the emacs git interface plus the github for mac program. In this case
+effective way to work, but so are a number of Graphical git clients
+which are covered in <a href="#git_gui">GUI Git Front Ends</a>. Use which ever
+makes most sense to you. In addition it is quite possible to use both
+the command line and one or more graphical tools.</p></div>
+<div class="paragraph"><p>When building this book I have been using command line git tool, and
+the Emacs git interface and the GitHub for mac program. In this case
 I used the emacs client for most commits and the GitHub for Mac for
 handling pushing and branches.</p></div>
 <div class="sect2">
@@ -871,8 +961,8 @@ handling pushing and branches.</p></div>
 <div class="paragraph"><p>To create a repository use the command <strong>git init</strong> which will
 initialize an empty git repository.  Once a repository has been
 created files can be added to it and all other operations performed.</p></div>
-<div class="paragraph"><p>The other way to create a repository is by doing it with Github or
-other remote hosting service. Once you create the repository on Github
+<div class="paragraph"><p>The other way to create a repository is by doing it with GitHub or
+other remote hosting service. Once you create the repository on GitHub
 you then clone the repository onto your local computer.</p></div>
 </div>
 <div class="sect2">
@@ -889,9 +979,16 @@ changes that have been made.  to do this you use <strong>git commit</strong>. Gi
 will open an editor to let you create a commit message. If you want to
 supply one on the command line use <strong>git commit -m "My Commit Message"
 file</strong>.</p></div>
-<div class="paragraph"><p>Warning: unlike CVS and SVN if you do a commit in a subdirectory it
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">unlike CVS and SVN if you do a commit in a subdirectory it
 will commit all files in the repository, not just those in the current
-repository.</p></div>
+repository.</td>
+</tr></table>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_branching_and_merging">Branching and Merging</h4>
@@ -934,7 +1031,7 @@ will force the user to figure it out.</p></div>
 <div class="sect4">
 <h5 id="_conventions_for_branching">Conventions for Branching</h5>
 <div class="paragraph"><p>Once again there is no one single convention for how to use
-branches. Some groups will use them more than others. At github they
+branches. Some groups will use them more than others. At GitHub they
 have the convention that anything in the <strong>master</strong> branch can be
 shipped at any time.</p></div>
 <div class="paragraph"><p>In order to maintain the quality of code in the <strong>master</strong> branch all
@@ -1032,7 +1129,7 @@ repository will have all three sets of changes. This is very different
 from sending a patch file where there is no change history.</p></div>
 </div>
 <div class="sect2">
-<h3 id="_a_pull_request">A Pull Request</h3>
+<h3 id="pull_request">A Pull Request</h3>
 <div class="paragraph"><p>Of course if Ann is going to pull changes from Bob she needs a way to
 know that she should pull his changes. If Ann and Bob are sitting next
 to each other Bob may just say to Ann "Ok pull my changes" and let her
@@ -1040,22 +1137,22 @@ know the URL of the repository and which branch the changes are
 on. You can push or pull from any local branch to any remote branch.</p></div>
 <div class="paragraph"><p>However if you are more than three or four people and are not sitting
 all in one place you will probably want a more formal way to do
-this. To support this Github has created a formal idea of a "Pull
+this. To support this GitHub has created a formal idea of a "Pull
 Request" which is a formal way for a user to let another user know
 that there are changes to be integrated.</p></div>
 <div class="paragraph"><p>If Ann has changes that she wishes Bob to take into his repository via
-Github (or bitbucket) she will go to the web site for her repository
-on Github and then select which branch contains her changes and of
+GitHub (or bitbucket) she will go to the web site for her repository
+on GitHub and then select which branch contains her changes and of
 course who she wishes to send the change request too.</p></div>
-<div class="paragraph"><p>Bob will then be notified by Github that he has a pull request
-pending. Github notifications can be configured to run over email,
+<div class="paragraph"><p>Bob will then be notified by GitHub that he has a pull request
+pending. GitHub notifications can be configured to run over email,
 threw the web site or via the API or a mobile app.</p></div>
 <div class="paragraph"><p>Bob will then have a chance to review the changes that Ann made and
 integrate them into his three or reject them.</p></div>
-<div class="paragraph"><p>All of this can also be done via the Github API, but that is somewhat
+<div class="paragraph"><p>All of this can also be done via the GitHub API, but that is somewhat
 beyond the scope of this chapter.</p></div>
 <div class="paragraph"><p>To illustrate let us use an example from the writing of this book. I
-have published this book on github and user <span class="monospaced">breskeby</span> noticed a typo
+have published this book on GitHub and user <span class="monospaced">breskeby</span> noticed a typo
 in one of these files. He had forked the repository and committed his
 change. You can see this in this graph. His change is the lower line
 in blue.</p></div>
@@ -1195,66 +1292,67 @@ site backup, which can provide an important level of safety for a
 small company that might not have procedures in place for backups or
 disaster recovery.</p></div>
 <div class="sect2">
-<h3 id="_github">Github</h3>
-<div class="paragraph"><p>The 10,000 pound gorilla of the DVCS hosting world is github. This is
-for a good reason, github has been leading the effort to create new
+<h3 id="_github_2">GitHub</h3>
+<div class="paragraph"><p>The 10,000 pound gorilla of the DVCS hosting world is GitHub. This is
+for a good reason, GitHub has been leading the effort to create new
 and innovative features for collaborative development. In addition
-github has  become the social network for programmers, and
+GitHub has  become the social network for programmers, and
 the central place for open source development, having taken that crown from
-soruceforge several years ago.</p></div>
+Soruceforge several years ago.</p></div>
 <div class="admonitionblock">
 <table><tr>
 <td class="icon">
 <div class="title">Note</div>
 </td>
-<td class="content">Several people from github provided suggestions and support for
+<td class="content">Several people from GitHub provided suggestions and support for
 the writing of this book.</td>
 </tr></table>
 </div>
+<div class="paragraph"><p>GitHub has become a leader in the field for a number of reasons. But
+one of them is that they practice what they preach. GitHub is very
+much a distributed company with people all over the world. So before
+they release tools to the world, they have used them internally. In
+addition their internal use of these tools is not just the standard
+run threw QA testing but actual use when things have to get done.</p></div>
 <div class="sect3">
 <h4 id="_community">Community</h4>
-<div class="paragraph"><p>One of Github&#8217;s goals is to provide a place for community of
-developers. There are a huge number of open source projects on github
+<div class="paragraph"><p>One of GitHub&#8217;s goals is to provide a place for community of
+developers. There are a huge number of open source projects on GitHub
 (Including this book) that can be forked and downloaded. In many ways
-github is providing the "View Source" feature for the current decade.</p></div>
-<div class="paragraph"><p>If your goal is to build a public project github can form the natural
-home for your project. Placing it on github will allow potential users
+GitHub is providing the "View Source" feature for the current decade.</p></div>
+<div class="paragraph"><p>If your goal is to build a public project GitHub can form the natural
+home for your project. Placing it on GitHub will allow potential users
 to find, follow and contribute to your project.</p></div>
+<div class="paragraph"><p>TODO: Expand</p></div>
 </div>
 <div class="sect3">
-<h4 id="_github_api_and_tools">Github API and tools</h4>
-<div class="paragraph"><p>In addition github provides a very robust API that allows developers
-to create applications that integrate with github. So for example when
+<h4 id="_github_api_and_tools">GitHub API and tools</h4>
+<div class="paragraph"><p>In addition GitHub provides a very robust API that allows developers
+to create applications that integrate with GitHub. So for example when
 building applications with PhoneGap it is possible to point PhoneGap
-at the correct github repository and then have PhoneGap simply pull
-the correct files from Github.</p></div>
-<div class="admonitionblock">
-<table><tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">TODO Talk about other tools that plug into github here</td>
-</tr></table>
-</div>
+at the correct GitHub repository and then have PhoneGap simply pull
+the correct files from GitHub.</p></div>
+<div class="paragraph"><p>When you want to use the GitHub API you have to give the application
+permission to use it. So the API will also allow access to your
+private repositories.</p></div>
 <div class="paragraph"><p>Since this API is public there is no reason that a developer can use
 this to automate part of a work flow. for more details see
-<a href="github_api.asciidoc">Github API</a>
-NOTE: TODO FIX TO an internal link</p></div>
+<a href="#github_api">Using the GitHub API</a>.</p></div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_features">Features</h3>
-<div class="paragraph"><p>Github has an amazing set of features, and between when I write this
+<div class="paragraph"><p>GitHub has an amazing set of features, and between when I write this
 and when this book is published they will probably introduce a bunch
 more. So this section will not be able to cover all of the features of
-github. However there are some highlights to know about.</p></div>
+GitHub. However there are some highlights to know about.</p></div>
 <div class="paragraph"><p>First of all if you are viewing a file in Markdown or Asciidoc it will
 render the file for you. You can see raw text by clicking the <span class="monospaced">Raw</span>
 button.</p></div>
 <div class="paragraph"><p>It will also render most programming languages in a way that
 programmers will be used to seeing them in their editors. So keywords
 will be highlighted and so on.</p></div>
-<div class="paragraph"><p>If you want to make a simple edit to a file in a github repository and
+<div class="paragraph"><p>If you want to make a simple edit to a file in a GitHub repository and
 do not wish to clone it to your local computer, edit the file and push
 the result back up. You can use the <span class="monospaced">Edit</span> button make a change and
 then commit it to the repository directly from the web page. This is
@@ -1268,13 +1366,14 @@ it most recently and when.</p></div>
 commits to a file.</p></div>
 <div class="sect3">
 <h4 id="_pricing">Pricing</h4>
-<div class="paragraph"><p>Github is a business and of course it costs money to run, so it
+<div class="paragraph"><p>GitHub is a business and of course it costs money to run, so it
 should come as no shock that they charge for hosting. In order to
 build community public projects, like this ebook, are hosted for
 free. However private projects cost money to create. Bitbucket&#8217;s plans
-are priced by number of repositories.  For details of how much it
-costs check the github web site.</p></div>
-<div class="paragraph"><p>At the time of this writing github charges $7 a month for up to five
+are priced by number of repositories. For details of what plans are
+available look at <a href="http://github.com/settings/billing">GitHub
+Billing</a> which will contain the current information.</p></div>
+<div class="paragraph"><p>At the time of this writing GitHub charges $7 a month for up to five
 repositories. If that is not enough then there are a number of plans
 that range up to $50/month for 50 repositories. (If you need more
 contact them).</p></div>
@@ -1289,27 +1388,27 @@ in the future.</td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_github_enterprise">Github Enterprise</h4>
+<h4 id="_github_enterprise">GitHub Enterprise</h4>
 <div class="paragraph"><p>If you are a a larger company and wish to have your source code behind
-your firewall then using the github.com site will not work for
+your firewall then using the GitHub.com site will not work for
 you. The problem is that you may wish to have the same features as the
-public github, including the API, and all the user interfaces of
-github.com .</p></div>
-<div class="paragraph"><p>The github folks have a plan to help you in this case in <strong>Github
+public GitHub, including the API, and all the user interfaces of
+GitHub.com .</p></div>
+<div class="paragraph"><p>The GitHub folks have a plan to help you in this case in <strong>GitHub
 Enterprise</strong>. This is a commercial software that runs as a virtual
 machine on your network. This supports a number of popular
 virtualization technologies including VMware and IBM Power.</p></div>
-<div class="paragraph"><p>Github Enterprise costs $21/user/month, but user licenses come in
+<div class="paragraph"><p>GitHub Enterprise costs $21/user/month, but user licenses come in
 blocks of 20. So expect to pay $5,000 per year at a minimum to use
 this software.</p></div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_bitbucket">Bitbucket</h3>
-<div class="paragraph"><p>In some ways Bitbucket is a clone of Github, however it has a few
-options that github lacks. First of all it support HG in addition to
+<div class="paragraph"><p>In some ways Bitbucket is a clone of GitHub, however it has a few
+options that GitHub lacks. First of all it support HG in addition to
 GIT so if your team wishes to use HG it is a strong possibility. In
-addition while github offers free public repositories it does require
+addition while GitHub offers free public repositories it does require
 you to pay for private ones. With Bitbucket you can have as many
 private repos as you want, however you can only share them with up to
 five other people before you have to pay for hosting. In addition
@@ -1323,7 +1422,7 @@ good option.</p></div>
 </div>
 <div class="sect3">
 <h4 id="_pricing_2">Pricing</h4>
-<div class="paragraph"><p>Unlike github, Bitbucket charges you not by how many repositories you
+<div class="paragraph"><p>Unlike GitHub, Bitbucket charges you not by how many repositories you
 have but based on how many people you wish to share them with. If you
 wish to share you&#8217;re repositories with five other people or less,
 total. Then you can use their free account. If you want to share with
@@ -1354,10 +1453,16 @@ internal to your office or on a co-located or cloud host.</p></div>
 <div class="sect1">
 <h2 id="_work_flow_planning">Work flow Planning</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>One of the great advantages of a DVCS, like git or hg,  is that there is not one
-prescribed work flow. Teams are free to figure out what will work best
-for them. The great disadvantage is that since there is not one
-prescribed work flow teams have to figure that out.</p></div>
+<div class="paragraph"><p>Git and HG solve part of the problem of how can a team work together
+and keep everything in sync. Which is to say that they solve the
+technical part of the problem. Of course these tools are only as good
+as the teams that use them. If used badly they can make a very well
+regimented mess where team members have histories of what they have
+done but trying to figure out how it all fits together is a
+nightmare.</p></div>
+<div class="paragraph"><p>To avoid this a team needs clear guidelines on how and when to
+integrate merges. Those guidelines along with the ideas of how to use
+GitHub form a workflow.</p></div>
 <div class="paragraph"><p>To figure out what type of work flow several questions will have to be
 asked. There are several attributes of a project and a team that have
 to be asked as shown on this table.  Of course this table is only a
@@ -1426,7 +1531,7 @@ and "Small" in the context of a team. I am assuming a more or less
 common sense definition in terms of the evolution of a project.</p></div>
 <div class="paragraph"><p>In addition different work flows will differ for public and private
 repositories. In this case a public repository is a project like this
-book or the linux kernel which anyone can access on github, bitbucket
+book or the linux kernel which anyone can access on GitHub, bitbucket
 or the like. Presumably they can also fork the project and submit pull
 requests (which may or may not be accepted by the project maintainer).</p></div>
 <div class="paragraph"><p>A private repository is one in which only members of a project team
@@ -1567,15 +1672,15 @@ cloud hosting.</p></div>
 small branches makes life simple.  For each new feature I create a new
 branch and do the development I want to do. When I have fished the
 feature I merge it back into the main branch.</p></div>
-<div class="paragraph"><p>I tend to use Bitbucket for solo projects. Unlike github Bitbucket
+<div class="paragraph"><p>I tend to use Bitbucket for solo projects. Unlike GitHub Bitbucket
 allows you to have have unlimited private repositories. As I don&#8217;t
-care about community in this case giving up github&#8217;s features doesn&#8217;t
+care about community in this case giving up GitHub&#8217;s features doesn&#8217;t
 bother me as I am working solo.</p></div>
 <div class="paragraph"><p>I do however want to use a cloud host as I may be using the project
 from several computes. I may wish to have access to the files from my
 desktop, my laptop and a cloud server for deployment.</p></div>
-<div class="paragraph"><p>One reason to prefer github is that many online build tools can take
-advantage of the github API.  SO example if I am building an
+<div class="paragraph"><p>One reason to prefer GitHub is that many online build tools can take
+advantage of the GitHub API.  SO example if I am building an
 application for mobile phones with PhoneGap then I may wish to use
 their API to build my application. {TODO link PhoneGap} this will
 enable me to take advantage of those build tools. In that case I could
@@ -1605,7 +1710,7 @@ laptop).</p></div>
 from your unix home directory to a custom subdirectory and then create
 symbolic links from the home directory. The new configuration
 directory can be  under version control with git or hg. In addition to
-keep a backup of these files you can then push them to github.</p></div>
+keep a backup of these files you can then push them to GitHub.</p></div>
 <div class="paragraph"><p>You can also keep the directory on dropbox, but that sometimes results
 in weird git errors if two computers try to update the repository at
 the same time.</p></div>
@@ -1669,12 +1774,12 @@ which could involve setting configuration options or uploading artwork
 or the like. (Clearly this will change based on the exact nature of
 the consultant client relationship).</p></div>
 <div class="paragraph"><p>In this case the easiest way to structure the project is probably to
-open a repository at Github or Bitbucket and share it with the
+open a repository at GitHub or Bitbucket and share it with the
 client so that you both have read / write access, it would be possible
 to fork a repo for the client and send pull requests back and forth
 but it is probably more trouble than it is worth.</p></div>
 <div class="paragraph"><p>I find that when working in this small a group many of the
-notification features that are present in github or Bitbucket can be
+notification features that are present in GitHub or Bitbucket can be
 dealt with by simply picking up my phone and calling my client, or by
 using some form of IM. Of course that does not mean that project
 notifications are not useful, so much as that using them may not be
@@ -1735,7 +1840,7 @@ should be informal.</p></div>
 <div class="paragraph"><p>In this case the project probably does not have a formal leadership,
 and planning is probably done on a whiteboard. In addition a "Pull
 Request" is probably done by turning to your friend and saying "Hey
-grab my code" not via a formal Github Pull request. (though you can do
+grab my code" not via a formal GitHub Pull request. (though you can do
 that too if you wish).</p></div>
 <div class="paragraph"><p>On the plus side you have the advantage that everyone involved is
 probably in the same room and may well have known each other before
@@ -1744,7 +1849,7 @@ members simpler.</p></div>
 <div class="paragraph"><p>In this case a deep system like the Linux Kernel team uses makes no
 sense what so ever. What we want here is a limited number of peers
 each of whom can pull from the others. This can be done with the hg
-server option if you are using HG, or by creating a project on Github
+server option if you are using HG, or by creating a project on GitHub
 and having everyone fork it. When it comes time to integrate code it
 will be as simple as doing a pull from the correct repository and
 branch.</p></div>
@@ -1761,9 +1866,9 @@ only his own computer and a way to share repositories. This can be
 done in several ways. First of all if you are using HG you can use the
 built in http server with the <em>hg --serve</em> command. If you are using
 git there is not quite as easy an option, however you can use a cloud
-hosting service like github or even share the repositories with a file
+hosting service like GitHub or even share the repositories with a file
 server or dropbox.</p></div>
-<div class="paragraph"><p>What would probably work is to setup a repository on github and give
+<div class="paragraph"><p>What would probably work is to setup a repository on GitHub and give
 everyone read/write access to it and push all changes there.</p></div>
 <div class="paragraph"><p>What will probably be more work is knowing when you have outgrown this
 workflow. At some point three guys sitting around a table with Pizza
@@ -1818,10 +1923,10 @@ width:100%;
 you are trying to leverage the community at large to build
 something. This may be a book (like this one), or a open source
 software project or even a families collection of recipes.</p></div>
-<div class="paragraph"><p>In this case Github is a clear win just by its large community and its
+<div class="paragraph"><p>In this case GitHub is a clear win just by its large community and its
 tools to create and support community.</p></div>
 <div class="paragraph"><p>In terms of how to work it is pretty simple, the project leader will
-publish a repository on github and then announce it (normally via
+publish a repository on GitHub and then announce it (normally via
 twitter, blogs, mailing lists or other social media sites).</p></div>
 <div class="paragraph"><p>At this point anyone else who is interested in the project will then
 fork the repository and add their own content. This will be sent back
@@ -1972,9 +2077,9 @@ ship that code.</p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_using_the_github_api">Using the Github API</h2>
+<h2 id="_using_the_github_api">Using the GitHub API</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>Once you know how you want to setup a work flow you may wish to
+<div class="paragraph" id="github_api"><p>Once you know how you want to setup a work flow you may wish to
 automate some or all of it, to make the life of your team easier. This
 way you can provide a set of tools, which can be run from a command
 line, as plug ins for your favorite tool, or as part of a web
@@ -1988,12 +2093,12 @@ git and push them up to a server.</p></div>
 <td class="icon">
 <div class="title">Note</div>
 </td>
-<td class="content">TODO talk about github&#8217;s web hosting</td>
+<td class="content">TODO talk about GitHub&#8217;s web hosting</td>
 </tr></table>
 </div>
 <div class="paragraph"><p>However if you want to do something more complex then you may wish to
-use the github api which lets you access many of the features of
-github programmaticly instead of doing them via the web interface.</p></div>
+use the GitHub api which lets you access many of the features of
+GitHub programmaticly instead of doing them via the web interface.</p></div>
 <div class="admonitionblock">
 <table><tr>
 <td class="icon">
@@ -2003,9 +2108,9 @@ github programmaticly instead of doing them via the web interface.</p></div>
 </tr></table>
 </div>
 <div class="sect2">
-<h3 id="_ci_with_github_and_travis_ci">CI with github and Travis CI</h3>
-<div class="paragraph"><p>If you are using github for hosting your product you may wish to do
-Continous Integration with your github repository. There are a number
+<h3 id="_ci_with_github_and_travis_ci">CI with GitHub and Travis CI</h3>
+<div class="paragraph"><p>If you are using GitHub for hosting your product you may wish to do
+Continous Integration with your GitHub repository. There are a number
 of ways to do this but one easy hosted solution is to use Travis CI
 (<a href="http://travis-ci.org">http://travis-ci.org</a>) which is a hosted CI solution that can run
 tests with a number of different languages.</p></div>
@@ -2049,7 +2154,7 @@ where the bug exists.</p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_graphical_git_front_ends">Graphical Git Front-ends</h2>
+<h2 id="git_gui">GUI Git Front-ends</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>I will confess to being a long time linux and Emacs user. As such
 moving from CVS and SVN to GIT and HG was pretty easy. The Emacs VCS
@@ -2067,7 +2172,7 @@ line.</p></div>
 <div class="sect2">
 <h3 id="_emacs">Emacs</h3>
 <div class="sect3">
-<h4 id="_using_git_with_emacs">Using Git with Emacs</h4>
+<h4 id="_using_git_and_hg_with_emacs">Using Git and HG with Emacs</h4>
 <div class="paragraph"><p>If you are an emacs user who has worked with other VCS systems such as
 CVS or SVN in emacs then you may wish to also work with GIT or HG in
 emacs. Thankfully Emacs has good integration with both git and HG. In
@@ -2079,23 +2184,37 @@ means in those four systems is not the same).</p></div>
 the status bar that says <em>Git:&lt;branch name&gt;</em>. If you click on that you
 will get a menu that will show you all of the various options for git
 under emacs.</p></div>
-</div>
-<div class="sect3">
-<h4 id="_using_hg_with_emacs">Using HG with Emacs</h4>
+<div class="paragraph"><p>In HG you sill see something similar but it will show a slightly
+different status bar message. <strong>TODO Expand</strong></p></div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_windows">Windows</h3>
 <div class="sect3">
-<h4 id="_tortoise_git">Tortoise GIT</h4>
+<h4 id="_tortoise_git_amp_hg">Tortoise GIT &amp; HG</h4>
 <div class="paragraph"><p>If you have used the Tortoise Client for CVS or SVN you will be
-happy to know that they also have a GIT client.</p></div>
+happy to know that they also have clients for GIT and HG. Both provide
+menus in the windows explorer.</p></div>
+<div class="paragraph"><p>TODO <strong>EXPAND</strong></p></div>
 </div>
 <div class="sect3">
-<h4 id="_tortoise_hg">Tortoise HG</h4>
-</div>
-<div class="sect3">
-<h4 id="_github_for_windows">Github For windows?</h4>
+<h4 id="_github_for_windows">GitHub For windows</h4>
+<div class="paragraph"><p>Github also has a great client for windows. Sporting a very nice
+Windows 8 Metro theme it can be found at
+<a href="http://windows.github.com">http://windows.github.com</a>. GitHub for windows will work with
+Windows XP, Vista, 7 and 8.</p></div>
+<div class="paragraph"><p>While setting up GIT for windows can be a pain in the neck <strong>Github for
+Windows</strong> is an easy install. It installs a self contained git install
+that will not require anything else.</p></div>
+<div class="paragraph"><p>When you first install GitHub for windows it will ask you for your
+github user and password. It will then setup an SSH key so that it can
+connect to GitHub.</p></div>
+<div class="paragraph"><p>If you install GitHub for windows and want to from time to time use a
+command line then you can do that. It installs
+<a href="https://github.com/dahlbyk/posh-git">Posh Git</a> which is a command
+line git client that will also use the same ssh key and other settings
+as the rest of Gihbu For windows.</p></div>
+<div class="paragraph"><p>TODO: Screen shots</p></div>
 </div>
 </div>
 <div class="sect2">
@@ -2105,34 +2224,27 @@ course download the command line git via homebrew (and probably
 should) but if you want to do some things with a graphical client
 there are a few free options.</p></div>
 <div class="sect3">
-<h4 id="_github_for_mac">Github For Mac</h4>
-<div class="paragraph"><p>The folks at Github, as part of their effort to improve the git
+<h4 id="_github_for_mac">GitHub For Mac</h4>
+<div class="paragraph"><p>The folks at GitHub, as part of their effort to improve the git
 ecosystem have their own Git client for the mac, You can download it
 from <a href="http://mac.github.com/">http://mac.github.com/</a> or by going to
-<a href="http://www.github.com">http://www.github.com</a> and selecting Github for Mac at the
-bottom of the page.</p></div>
-<div class="paragraph"><p>Note: you do not need to use github for mac only with Github, it will
+<a href="http://www.github.com">http://www.github.com</a> and selecting GitHub for Mac at the
+bottom of the page. GitHub for Mac works with Mac OS 10.7 (Lion) and
+later.</p></div>
+<div class="paragraph"><p>Note: you do not need to use GitHub for mac only with GitHub, it will
 work with any git repository. So if you host your public projects on
 github and your private ones on bitbucket you can use this tool with
-both. However some features may only work with github</p></div>
-<div class="paragraph"><p>The github mac client will of course do everything you would expect a
+both. However some features may only work with GitHub</p></div>
+<div class="paragraph"><p>The GitHub mac client will of course do everything you would expect a
 git client to do. It can commit changes, view history, create and
 merge branches and so on.</p></div>
-<div class="paragraph"><p>When you open the Github client you are presented with a panel that
+<div class="paragraph"><p>When you open the GitHub client you are presented with a panel that
 lists your repositories. You can select one to work with. If you need
 to create a new repository or open one that the client does not know
 about you can do that from the file menu.</p></div>
 <div class="paragraph"><p><span class="image">
 <img src="graphical_git/mac_github/repositories.png" alt="graphical_git/mac_github/repositories.png" title="Repositories Screen">
 </span></p></div>
-<div class="admonitionblock">
-<table><tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">TODO How to clone a repo?</td>
-</tr></table>
-</div>
 <div class="paragraph"><p>When you select a repository you are presented with a panel with four
 buttons on the side, that cover most of the options that you would
 want to do.</p></div>
@@ -2164,13 +2276,12 @@ file
 <img src="graphical_git/mac_github/settings.png" alt="graphical_git/mac_github/settings.png" title="Settings Screen">
 </span></p></div>
 <div class="paragraph"><p>You can also do a push or a pull from the client. to do a push hit
-command-P and a pull can be done with Command-Shift-P.</p></div>
+command-P and a pull can be done with Command-Shift-P. The default way
+to sync with a server from GitHub for mac is to use the "Sync" button
+which will do a push and a pull at once.</p></div>
 <div class="paragraph"><p>Nicely it will also work with other git clients (as you would expect)
-so you can commit changes with emacs and review them with the github
+so you can commit changes with eclipse and review them with the GitHub
 client.</p></div>
-</div>
-<div class="sect3">
-<h4 id="_sourcetree">Sourcetree</h4>
 </div>
 </div>
 </div>
@@ -2179,7 +2290,7 @@ client.</p></div>
 <div id="footnotes"><hr></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2012-09-26 21:29:30 IST
+Last updated 2012-10-29 13:02:26 MDT
 </div>
 </div>
 </body>
